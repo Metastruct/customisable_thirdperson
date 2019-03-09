@@ -1004,7 +1004,7 @@ do -- Presets
 	end
 
 	function ctp:LoadNodePreset(name)
-		local tbl = ctp.luadata.ReadFile(file.Read("ctp/node_presets/" .. name .. ".txt", "DATA"))
+		local tbl = ctp.luadata.ReadFile(file.Read("ctp/node_presets/" .. name .. ".txt", "DATA") or "")
 
 		if not tbl.nodes then MsgN("CTP tried to load node preset '" .. name .. "' but it doesn't exist!") return end
 
